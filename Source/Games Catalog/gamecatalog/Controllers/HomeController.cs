@@ -20,9 +20,17 @@ public class HomeController : Controller
 
         var model = new Home();
 
-        string hostname = Dns.GetHostName();
+        var hostname = Dns.GetHostEntry(Dns.GetHostName());
 
-        model.hostip = Dns.GetHostByName(hostname).AddressList[0].ToString();
+        foreach (var ip in hostname.AddressList)
+        {
+            if (ip.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork)
+            {
+                model.hostip = ip.ToString();
+            }
+        }
+
+        //model.hostip = hostname;//Dns.GetHostByName(hostname).AddressList[0].ToString();
 
         return View(model);
     }
