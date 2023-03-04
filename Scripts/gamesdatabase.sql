@@ -9,30 +9,24 @@
 \pard\pardeftab720\partightenfactor0
 
 \f0\fs24 \cf2 \cb3 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 CREATE\cf4 \strokec4  \cf2 \strokec2 DATABASE\cf4 \strokec4  \cf5 \strokec5 games\cf4 \cb1 \strokec4 \
-\
-\cf2 \cb3 \strokec2 \
-CREATE\cf4 \strokec4  \cf2 \strokec2 TABLE\cf4 \strokec4  [dbo].[consoles] (\cb1 \
-\pard\pardeftab720\partightenfactor0
-\cf4 \cb3     [id]      \cf2 \strokec2 INT\cf4 \strokec4            \cf5 \strokec5 IDENTITY\cf4 \strokec4  (\cf6 \cb3 \strokec6 1\cf4 \cb3 \strokec4 , \cf6 \cb3 \strokec6 1\cf4 \cb3 \strokec4 ) \cf2 \strokec2 NOT NULL\cf4 \strokec4 ,\cb1 \
-\cb3     [console] \cf2 \strokec2 VARCHAR\cf4 \strokec4  (\cf6 \cb3 \strokec6 50\cf4 \cb3 \strokec4 )  \cf2 \strokec2 NULL\cf4 \strokec4 ,\cb1 \
-\cb3     [logo]    \cf2 \strokec2 VARCHAR\cf4 \strokec4  (MAX) \cf2 \strokec2 NULL\cf4 \strokec4 ,\cb1 \
-\cb3     \cf2 \strokec2 CONSTRAINT\cf4 \strokec4  [PK_consoles] \cf2 \strokec2 PRIMARY KEY\cf4 \strokec4  \cf2 \strokec2 CLUSTERED\cf4 \strokec4  ([id] \cf2 \strokec2 ASC\cf4 \strokec4 )\cb1 \
+CREATE\cf4  \cf2 TABLE\cf4  [dbo].[consoles] (\cb1 \
+\cb3     [id]      \cf2 INT\cf4            \cf5 IDENTITY\cf4  (\cf6 1\cf4 , \cf6 1\cf4 ) \cf2 NOT NULL\cf4 ,\cb1 \
+\cb3     [console] \cf2 VARCHAR\cf4  (\cf6 50\cf4 )  \cf2 NULL\cf4 ,\cb1 \
+\cb3     [logo]    \cf2 VARCHAR\cf4  (MAX) \cf2 NULL\cf4 ,\cb1 \
+\cb3     \cf2 CONSTRAINT\cf4  [PK_consoles] \cf2 PRIMARY KEY\cf4  \cf2 CLUSTERED\cf4  ([id] \cf2 ASC\cf4 )\cb1 \
 \cb3 );\cb1 \
 \
-\pard\pardeftab720\partightenfactor0
-\cf2 \cb3 \strokec2 CREATE\cf4 \strokec4  \cf2 \strokec2 TABLE\cf4 \strokec4  [dbo].[game] (\cb1 \
-\cb3     [id]               \cf2 \strokec2 INT\cf4 \strokec4            \cf5 \strokec5 IDENTITY\cf4 \strokec4  (\cf6 \cb3 \strokec6 1\cf4 \cb3 \strokec4 , \cf6 \cb3 \strokec6 1\cf4 \cb3 \strokec4 ) \cf2 \strokec2 NOT NULL\cf4 \strokec4 ,\cb1 \
-\cb3     [id_console]       \cf2 \strokec2 INT\cf4 \strokec4            \cf2 \strokec2 NULL\cf4 \strokec4 ,\cb1 \
-\cb3     [name]             \cf2 \strokec2 VARCHAR\cf4 \strokec4  (MAX) \cf2 \strokec2 NULL\cf4 \strokec4 ,\cb1 \
-\cb3     [descri\'e7\'e3o]        \cf2 \strokec2 VARCHAR\cf4 \strokec4  (MAX) \cf2 \strokec2 NULL\cf4 \strokec4 ,\cb1 \
-\cb3     [data_compra]      \cf2 \strokec2 DATE\cf4 \strokec4           \cf2 \strokec2 NULL\cf4 \strokec4 ,\cb1 \
-\cb3     [thumb]            \cf2 \strokec2 VARCHAR\cf4 \strokec4  (MAX) \cf2 \strokec2 NULL\cf4 \strokec4 ,\cb1 \
-\cb3     [data_finalizacao] \cf2 \strokec2 DATE\cf4 \strokec4           \cf2 \strokec2 NULL\cf4 \strokec4 ,\cb1 \
-\cb3     [finalizado]       \cf2 \strokec2 BIT\cf4 \strokec4            \cf2 \strokec2 NOT NULL\cf4 \strokec4 ,\cb1 \
-\cb3     \cf2 \strokec2 CONSTRAINT\cf4 \strokec4  [PK_game] \cf2 \strokec2 PRIMARY KEY\cf4 \strokec4  \cf2 \strokec2 CLUSTERED\cf4 \strokec4  ([id] \cf2 \strokec2 ASC\cf4 \strokec4 ),\cb1 \
-\cb3     \cf2 \strokec2 CONSTRAINT\cf4 \strokec4  [FK_game_consoles] \cf2 \strokec2 FOREIGN KEY\cf4 \strokec4  ([id_console]) \cf2 \strokec2 REFERENCES\cf4 \strokec4  [dbo].[consoles] ([id])\cb1 \
+\cf2 \cb3 CREATE\cf4  \cf2 TABLE\cf4  [dbo].[game] (\cb1 \
+\cb3     [id]               \cf2 INT\cf4            \cf5 IDENTITY\cf4  (\cf6 1\cf4 , \cf6 1\cf4 ) \cf2 NOT NULL\cf4 ,\cb1 \
+\cb3     [id_console]       \cf2 INT\cf4            \cf2 NULL\cf4 ,\cb1 \
+\cb3     [name]             \cf2 VARCHAR\cf4  (MAX) \cf2 NULL\cf4 ,\cb1 \
+\cb3     [descricao]        \cf2 VARCHAR\cf4  (MAX) \cf2 NULL\cf4 ,\cb1 \
+\cb3     [data_compra]      \cf2 DATE\cf4           \cf2 NULL\cf4 ,\cb1 \
+\cb3     [thumb]            \cf2 VARCHAR\cf4  (MAX) \cf2 NULL\cf4 ,\cb1 \
+\cb3     [data_finalizacao] \cf2 DATE\cf4           \cf2 NULL\cf4 ,\cb1 \
+\cb3     [finalizado]       \cf2 BIT\cf4            \cf2 NOT NULL\cf4 ,\cb1 \
+\cb3     \cf2 CONSTRAINT\cf4  [PK_game] \cf2 PRIMARY KEY\cf4  \cf2 CLUSTERED\cf4  ([id] \cf2 ASC\cf4 ),\cb1 \
+\cb3     \cf2 CONSTRAINT\cf4  [FK_game_consoles] \cf2 FOREIGN KEY\cf4  ([id_console]) \cf2 REFERENCES\cf4  [dbo].[consoles] ([id])\cb1 \
 \cb3 );\cb1 \
-\pard\pardeftab720\partightenfactor0
-\cf4 \
+\
 }
