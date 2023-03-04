@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using gamecatalog.Models;
 using System;
+using System.Net;
 
 namespace gamecatalog.Controllers;
 
@@ -19,7 +20,9 @@ public class HomeController : Controller
 
         var model = new Home();
 
-        model.hostname = Environment.MachineName;
+        string hostname = Dns.GetHostName();
+
+        model.hostip = Dns.GetHostByName(hostname).AddressList[0].ToString();
 
         return View(model);
     }
