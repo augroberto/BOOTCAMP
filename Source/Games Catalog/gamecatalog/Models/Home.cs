@@ -3,7 +3,7 @@ namespace gamecatalog.Models
 {
 	public class Home
 	{
-		public string hostname { get; set; }
+		public string hostip { get; set; }
 	}
 }
 
