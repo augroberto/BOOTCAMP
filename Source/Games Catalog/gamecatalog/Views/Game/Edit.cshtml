@@ -1,0 +1,56 @@
+﻿@model gamecatalog.Models.Game
+@{
+    ViewData["Title"] = "Home Page";
+}
+<div class="text-center">
+    <h1 class="display-4">Editar Game</h1>
+</div>
+<fieldset>
+    <div class="editor-label">
+        @Html.LabelFor(model => model.nome)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.nome)
+        @Html.ValidationMessageFor(model => model.nome)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.descricao)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.descricao)
+        @Html.ValidationMessageFor(model => model.descricao)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.datacompra)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.datacompra)
+        @Html.ValidationMessageFor(model => model.datacompra)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.finalizado)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.finalizado)
+        @Html.ValidationMessageFor(model => model.finalizado)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.datafinalizacao)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.datafinalizacao)
+        @Html.ValidationMessageFor(model => model.datafinalizacao)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.console)
+    </div>
+
+    <p>
+        <input type="submit" value="Salvar" id="Submit" class="btn btn-default" onclick="location.href='@Url.Action("Edit", "Game")'" />
+    </p>
+</fieldset>

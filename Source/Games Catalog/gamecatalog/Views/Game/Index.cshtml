@@ -1,0 +1,52 @@
+﻿@model IEnumerable<gamecatalog.Models.Game>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Catalogo de Games</h1>
+</div>
+
+<!--
+<p>
+    @Html.ActionLink("Novo Game", "Create", "Game")
+</p>
+    -->
+<table class="table table-striped">
+    <thead>
+        <tr class="table-warning">
+            <th scope="col">#Id</th>
+            <th scope="col">Console</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Descrição</th>
+            <th scope="col">Data da Compra</th>
+            <th scope="col">Finalizado</th>
+            <th scope="col">Data da Finalização</th>
+            <th>#</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.id</td>
+                <td>@item.console</td>
+                <td>@item.nome </td>
+                <td>@item.descricao</td>
+                <td>@item.datacompra</td>
+                <td>@item.finalizado</td>
+                <td>@item.datafinalizacao</td>
+                <!--
+                <td>
+                    @Html.ActionLink("Edit", "Edit", "Game", new { id = item.id }) |
+                    @Html.ActionLink("Details", "Details", "Game", new { id = item.id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.id })
+                </td>
+                -->
+                <td>
+                    @Html.ActionLink("Details", "Details", "Game", new { id = item.id })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

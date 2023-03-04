@@ -1,0 +1,45 @@
+﻿html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.cardlogogame {
+    width: 350px;
+    height: 300px;
+    display: inline-block;
+    margin: 5px;
+    margin-top: 100px
+}
+
+.logogame {
+    width: 350px;
+    height: 300px;
+}
+
+.logo {
+    width: 650px;
+    height: 300px;
+}
+
+.singlelogo {
+    width: 50px;
+    height: 50px;
+}
+
+.table {
+    margin-top: 50px
+}

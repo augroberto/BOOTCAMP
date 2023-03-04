@@ -1,0 +1,20 @@
+﻿@model IEnumerable<gamecatalog.Models.Game>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Detalhes do Games</h1>
+</div>
+<div>
+    @foreach (var item in Model)
+    {
+        <div>@item.id</div>
+        <div>@item.console</div>
+        <div>@item.nome </div>
+        <div>@item.descricao</div>
+        <div>@item.datacompra</div>
+        <div>@item.finalizado</div>
+        <div>@item.datafinalizacao</div>
+    }
+</div>
