@@ -520,5 +520,8 @@
 /Users/augroberto/Documents/Git/Projects/Games Catalog/gamecatalog/obj/Debug/net6.0/gamecatalog.pdb
 /Users/augroberto/Documents/Git/Projects/Games Catalog/gamecatalog/obj/Debug/net6.0/gamecatalog.genruntimeconfig.cache
 /Users/augroberto/Documents/Git/Projects/Games Catalog/gamecatalog/obj/Debug/net6.0/ref/gamecatalog.dll
-/Users/augroberto/Documents/Git/Projects/Games Catalog/gamecatalog/bin/Debug/net6.0/EntityFramework.dll
-/Users/augroberto/Documents/Git/Projects/Games Catalog/gamecatalog/bin/Debug/net6.0/System.Data.Entity.Repository.dll
+/Users/augroberto/Documents/Git/Projects/Games Catalog/gamecatalog/bin/Debug/net6.0/Azure.Core.dll
+/Users/augroberto/Documents/Git/Projects/Games Catalog/gamecatalog/bin/Debug/net6.0/Azure.Storage.Blobs.dll
+/Users/augroberto/Documents/Git/Projects/Games Catalog/gamecatalog/bin/Debug/net6.0/Azure.Storage.Common.dll
+/Users/augroberto/Documents/Git/Projects/Games Catalog/gamecatalog/bin/Debug/net6.0/System.IO.Hashing.dll
+/Users/augroberto/Documents/Git/Projects/Games Catalog/gamecatalog/bin/Debug/net6.0/System.Memory.Data.dll

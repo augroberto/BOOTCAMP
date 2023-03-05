@@ -17,6 +17,7 @@
     <None Remove="Views\Game\" />
     <None Remove="Microsoft.EntityFrameworkCore" />
     <None Remove="System.Data.Entity.Repository" />
+    <None Remove="Azure.Storage.Blobs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="wwwroot\images\cloud_treinamentos_-_escolhida_-_1.png" />
@@ -26,6 +27,7 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.11" />
     <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
+    <PackageReference Include="Azure.Storage.Blobs" Version="12.15.0" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Game\" />

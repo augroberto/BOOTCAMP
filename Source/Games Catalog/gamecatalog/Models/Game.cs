@@ -12,6 +12,7 @@ namespace gamecatalog.Models
 		public bool finalizado { get; set; }
 		public DateTime datafinalizacao { get; set; }
 		public string thumb { get; set; }
+		public string URLthumb { get; set; }
 		public string console { get; set; }
         public int consoleid { get; set; }
     }
