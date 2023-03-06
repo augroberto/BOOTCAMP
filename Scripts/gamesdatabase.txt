@@ -1,0 +1,19 @@
+CREATE TABLE [dbo].[consoles] (
+    [id]      INT           IDENTITY (1, 1) NOT NULL,
+    [console] VARCHAR (50)  NULL,
+    [logo]    VARCHAR (MAX) NULL,
+    CONSTRAINT [PK_consoles] PRIMARY KEY CLUSTERED ([id] ASC)
+);
+
+CREATE TABLE [dbo].[game] (
+    [id]               INT           IDENTITY (1, 1) NOT NULL,
+    [id_console]       INT           NULL,
+    [name]             VARCHAR (MAX) NULL,
+    [descricao]        VARCHAR (MAX) NULL,
+    [data_compra]      DATE          NULL,
+    [thumb]            VARCHAR (MAX) NULL,
+    [data_finalizacao] DATE          NULL,
+    [finalizado]       BIT           NOT NULL,
+    CONSTRAINT [PK_game] PRIMARY KEY CLUSTERED ([id] ASC),
+    CONSTRAINT [FK_game_consoles] FOREIGN KEY ([id_console]) REFERENCES [dbo].[consoles] ([id])
+);

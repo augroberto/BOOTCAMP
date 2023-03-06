@@ -1,0 +1,20 @@
+INSERT INTO consoles (console, logo)
+VALUES ('Xbox One', null);
+
+INSERT INTO consoles (console, logo)
+VALUES ('Play Station 5', null);
+
+INSERT INTO consoles (console, logo)
+VALUES ('Nintendo Switch', null);
+
+
+
+INSERT INTO game (id_console, name, descricao, data_compra, thumb, data_finalizacao, finalizado)
+VALUES (1, 'Resident Evil Village', 'Oitavo jogo da saga RE 2', '2022-01-01',   'REVilage.jpg', '2022-02-01', 1);
+
+
+INSERT INTO game (id_console, name, descricao, data_compra, thumb, data_finalizacao, finalizado)
+VALUES (2, 'The Last Of Us', 'Game aclamado', '2022-01-01',   'TheLastOfUs.jpg', '2023-01-23', 0);
+
+INSERT INTO game (id_console, name, descricao, data_compra, thumb, data_finalizacao, finalizado)
+VALUES (3, 'Mario Cart', 'Game para crianças', '2023-01-20',  'MarioKart.jpg', '2023-01-30', 0);
