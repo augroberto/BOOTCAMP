@@ -9,13 +9,40 @@
 <div>
     @foreach (var item in Model)
     {
-        <div>@item.id</div>
-        <div>@item.console</div>
-        <div>@item.nome </div>
-        <div>@item.descricao</div>
-        <div>@item.datacompra</div>
-        <div>@item.finalizado</div>
-        <div>@item.datafinalizacao</div>
-        <div><img src="@item.URLthumb"/></div>
+        <form>
+            <fieldset disabled>
+                <div class="form-group">
+                    <label for="disabledTextInput">Console</label>
+                    <input type="text" id="disabledTextInput" class="form-control" placeholder="@item.console">
+                </div>
+                <div class="form-group">
+                    <label for="disabledTextInput">Nome do Jogo</label>
+                    <input type="text" id="disabledTextInput" class="form-control" placeholder="@item.nome">
+                </div>
+                <div class="form-group">
+                    <label for="disabledTextInput">Descrição do Jogo</label>
+                    <input type="text" id="disabledTextInput" class="form-control" placeholder="@item.descricao">
+                </div>
+                <div class="form-group">
+                    <label for="disabledTextInput">Data de compra do Jogo</label>
+                    <input type="text" id="disabledTextInput" class="form-control" placeholder="@item.datacompra">
+                </div>
+                <div class="form-group">
+                    <label for="disabledTextInput">Está zerado?</label>
+                    <input type="text" id="disabledTextInput" class="form-control" placeholder="@item.finalizado">
+                </div>
+                <div class="form-group">
+                    <label for="disabledTextInput">Data em que zerou o jogo</label>
+                    <input type="text" id="disabledTextInput" class="form-control" placeholder="@item.datafinalizacao">
+                </div>
+                <div class="card">
+                    <img src="@item.URLthumb" />
+                </div>
+            </fieldset>
+        </form>
+        <!-- <div>
+            @Html.ActionLink("Voltar", "Index", "Game", new { id = @item.consoleid }, htmlAttributes: new { @class = "btn btn-info", @role = "button" })
+        </div>
+        -->
     }
 </div>

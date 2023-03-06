@@ -14,7 +14,7 @@
     -->
 <table class="table table-striped">
     <thead>
-        <tr class="table-warning">
+        <tr class="table-info">
             <th scope="col">#Id</th>
             <th scope="col">Console</th>
             <th scope="col">Nome</th>
@@ -44,7 +44,7 @@
                 </td>
                 -->
             <td>
-                @Html.ActionLink("Details", "Details", "Game", new { id = item.id })
+                @Html.ActionLink("Details", "Details", "Game", new { id = item.id }, htmlAttributes: new { @class = "btn btn-info", @role = "button" })
             </td>
             </tr>
         }
