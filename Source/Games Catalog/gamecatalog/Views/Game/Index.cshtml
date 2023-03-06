@@ -7,11 +7,6 @@
     <h1 class="display-4">Catalogo de Games</h1>
 </div>
 
-<!--
-<p>
-    @Html.ActionLink("Novo Game", "Create", "Game")
-</p>
-    -->
 <table class="table table-striped">
     <thead>
         <tr class="table-info">
@@ -36,13 +31,6 @@
                 <td>@item.datacompra</td>
                 <td>@item.finalizado</td>
                 <td>@item.datafinalizacao</td>
-                <!--
-                <td>
-                    @Html.ActionLink("Edit", "Edit", "Game", new { id = item.id }) |
-                    @Html.ActionLink("Details", "Details", "Game", new { id = item.id }) |
-                    @Html.ActionLink("Delete", "Delete", new { id = item.id })
-                </td>
-                -->
             <td>
                 @Html.ActionLink("Details", "Details", "Game", new { id = item.id }, htmlAttributes: new { @class = "btn btn-info", @role = "button" })
             </td>
