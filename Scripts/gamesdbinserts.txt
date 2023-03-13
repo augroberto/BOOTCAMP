@@ -17,4 +17,4 @@ INSERT INTO game (id_console, name, descricao, data_compra, thumb, data_finaliza
 VALUES (2, 'The Last Of Us', 'Game aclamado', '2022-01-01',   'TheLastOfUs.jpg', '2023-01-23', 0);
 
 INSERT INTO game (id_console, name, descricao, data_compra, thumb, data_finalizacao, finalizado)
-VALUES (3, 'Mario Cart', 'Game para crianças', '2023-01-20',  'MarioKart.jpg', '2023-01-30', 0);
+VALUES (3, 'Mario kart', 'Game para crianças', '2023-01-20',  'MarioKart.jpg', '2023-01-30', 0);
